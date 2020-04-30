@@ -1,0 +1,11 @@
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\bin\Debug\netcoreapp3.1\MovieList.exe
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\bin\Debug\netcoreapp3.1\MovieList.deps.json
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\bin\Debug\netcoreapp3.1\MovieList.runtimeconfig.json
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\bin\Debug\netcoreapp3.1\MovieList.runtimeconfig.dev.json
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\bin\Debug\netcoreapp3.1\MovieList.dll
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\bin\Debug\netcoreapp3.1\MovieList.pdb
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\obj\Debug\netcoreapp3.1\MovieList.csprojAssemblyReference.cache
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\obj\Debug\netcoreapp3.1\MovieList.AssemblyInfoInputs.cache
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\obj\Debug\netcoreapp3.1\MovieList.AssemblyInfo.cs
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\obj\Debug\netcoreapp3.1\MovieList.dll
+C:\Users\imWUMPUS\source\repos\CSharp_April2020\MovieList\MovieList\obj\Debug\netcoreapp3.1\MovieList.pdb
