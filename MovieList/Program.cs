@@ -10,13 +10,14 @@ namespace MovieList
             List<Movie> movieList = new List<Movie>();
             PopulateList(movieList);
             int selection = 0;
-            bool validInput = false;
+            bool validInput;
             string search = "";
             string input = "";
             string message = "";
             bool exitCondition = false;
             while (!exitCondition)
             {
+                validInput = false;
                 while (!validInput)
                 {
                     message = "Which movie category would you like to view?\n1. Action\n2. Animated\n3. Horror\n4. Scifi";
@@ -79,6 +80,7 @@ namespace MovieList
                     }
                     else
                     {
+                        Console.WriteLine("Invalid input. Please try again.");
                         validInput = false;
                     }
                 }
