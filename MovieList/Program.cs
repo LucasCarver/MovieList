@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MovieList
 {
@@ -9,6 +10,7 @@ namespace MovieList
         {
             List<Movie> movieList = new List<Movie>();
             PopulateList(movieList);
+            movieList = movieList.OrderBy(movie => movie.Title).ToList();
             int selection = 0;
             bool validInput;
             string search = "";
@@ -20,7 +22,7 @@ namespace MovieList
                 validInput = false;
                 while (!validInput)
                 {
-                    message = "Which movie category would you like to view?\n1. Action\n2. Animated\n3. Horror\n4. Scifi";
+                    message = "Which movie category would you like to view?\n 1. Action\n 2. Animated\n 3. Horror\n 4. Scifi";
                     input = PromptUser(message);
                     try
                     {
@@ -69,20 +71,42 @@ namespace MovieList
                 message = "Would you like to search a different category? y/n";
                 while (!validInput)
                 {
-                    input = PromptUser(message).Trim().ToLower();
-                    if (input == "y" || input == "n")
+                    try
                     {
-                        validInput = true;
-                        if(input == "n")
+                        input = PromptUser(message).Trim().ToLower();
+                        if (input != "y" && input != "n")
                         {
-                            exitCondition = true;
+                            throw new Exception("Invalid input. Please try again.");
                         }
+                        else
+                        {
+                            if (input == "n")
+                            {
+                                exitCondition = true;
+                            }
+                            validInput = true;
+                        }
+
+
                     }
-                    else
+                    catch(Exception e)
                     {
-                        Console.WriteLine("Invalid input. Please try again.");
-                        validInput = false;
+                        Console.WriteLine(e.Message);
                     }
+                    //input = PromptUser(message).Trim().ToLower();
+                    //if (input == "y" || input == "n")
+                    //{
+                    //    validInput = true;
+                    //    if(input == "n")
+                    //    {
+                    //        exitCondition = true;
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    Console.WriteLine("Invalid input. Please try again.");
+                    //    validInput = false;
+                    //}
                 }
             }
             Console.WriteLine("Thank you for using the movie list program.");
@@ -96,17 +120,22 @@ namespace MovieList
 
         public static void PopulateList(List<Movie> movies)
         {
-            movies.Add(new Movie("Avatar", "Scifi"));
-            movies.Add(new Movie("Baby Driver", "Action"));
-            movies.Add(new Movie("Coco", "Animated"));
-            movies.Add(new Movie("Die Hard", "Action"));
-            movies.Add(new Movie("Ghost in the Shell", "Animated"));
-            movies.Add(new Movie("It", "Horror"));
+            movies.Add(new Movie("Revenge of the Sith", "Scifi"));
             movies.Add(new Movie("John Wick", "Action"));
             movies.Add(new Movie("Mad Max: Fury Road", "Action"));
             movies.Add(new Movie("Moana", "Animated"));
-            movies.Add(new Movie("Revenge of the Sith", "Scifi"));
+            movies.Add(new Movie("Coco", "Animated"));
+            movies.Add(new Movie("Die Hard", "Action"));
+            movies.Add(new Movie("Ghost in the Shell", "Animated"));
+            movies.Add(new Movie("Baby Driver", "Action"));
+            movies.Add(new Movie("It", "Horror"));
             movies.Add(new Movie("The Shining", "Horror"));
+            movies.Add(new Movie("Avatar", "Scifi"));
+        }
+
+        public static void SortList(List<Movie> movies)
+        {
+
         }
     }
 }
